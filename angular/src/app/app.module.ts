@@ -14,6 +14,8 @@ import { CustomDirectivesComponent } from './custom-directives/custom-directives
 import { YellowBackgroundDirective } from './shared/yellow-background.directive';
 import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { HighlightDirective } from './shared/highlight.directive';
+import { CursesComponent } from './curses/curses.component';
+import { CursesService } from './shared/curses.service';
 
 @NgModule({
   declarations: [
@@ -27,14 +29,17 @@ import { HighlightDirective } from './shared/highlight.directive';
     YellowBackgroundDirective,
     CustomDirectivesComponent,
     HighlightMouseDirective,
-    HighlightDirective
+    HighlightDirective,
+    CursesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    CursesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
