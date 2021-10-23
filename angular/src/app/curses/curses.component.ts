@@ -9,10 +9,8 @@ import { CursesService } from '../shared/curses.service';
 export class CursesComponent implements OnInit {
 
   curses: string[] = [];
-  cursesService: CursesService;
 
-  constructor(private _cursesService: CursesService) { 
-    this.cursesService = _cursesService;
+  constructor(private cursesService: CursesService) { 
   }
 
   ngOnInit(): void {

@@ -16,6 +16,8 @@ import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { HighlightDirective } from './shared/highlight.directive';
 import { CursesComponent } from './curses/curses.component';
 import { CursesService } from './shared/curses.service';
+import { BooksComponent } from './books/books.component';
+import { CamelCasePipe } from './camel-case.pipe';
 
 @NgModule({
   declarations: [
@@ -30,12 +32,17 @@ import { CursesService } from './shared/curses.service';
     CustomDirectivesComponent,
     HighlightMouseDirective,
     HighlightDirective,
-    CursesComponent
+    CursesComponent,
+    BooksComponent,
+    CamelCasePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
+  ],
+  exports:[
+    CamelCasePipe
   ],
   providers: [
     CursesService

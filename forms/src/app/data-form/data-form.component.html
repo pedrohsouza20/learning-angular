@@ -1,0 +1,13 @@
+<form action="" [formGroup]="form">
+    <label for="name">Nome</label>
+    <input type="text" formControlName="name" id="name" placeholder="Nome">
+    <label for="email">Email</label>
+    <input type="email" formControlName="email" id="email">
+    <button type="submit" (click)="showForm()">mostrar form console</button>
+</form>
+
+<div>
+    <br><br>
+    Name: {{ form.value.name }} <br><br>
+    Email: {{ form.value.email }}
+</div>
